@@ -173,10 +173,11 @@ function handleChangeQ1(e) {
 }
 
 function calculatePoints() {
-  let points = [];
-  const q1 = document.querySelector("input[name='q1']:checked");
-  const q2 = document.getElementById("question3");
-  console.log('q2 :', q2);
-  const q6 = document.getElementById("toggle-on-q6-1").value;
+  const q5 = document.querySelector("input[name='q5']:checked").value;
+  const q6 = document.querySelector("input[name='q6']:checked").value;
+  const q7 = document.querySelector("input[name='q7']:checked").value;
+  const q8 = document.querySelector("input[name='q8']:checked").value;
+  
+  return q5 + q6 + q7 + q8;
 }
 
