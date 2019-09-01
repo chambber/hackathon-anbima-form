@@ -150,7 +150,7 @@ var output = document.getElementById("demo");
 output.innerHTML = slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
+slider.oninput = function () {
   output.innerHTML = this.value;
 }
 
@@ -177,7 +177,14 @@ function calculatePoints() {
   const q6 = document.querySelector("input[name='q6']:checked").value;
   const q7 = document.querySelector("input[name='q7']:checked").value;
   const q8 = document.querySelector("input[name='q8']:checked").value;
-  
-  return q5 + q6 + q7 + q8;
+
+  const result = q5 + q6 + q7 + q8;
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", 'http://localhost:7072/', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({
+    value: result
+  }));
 }
 
