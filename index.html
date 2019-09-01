@@ -2,120 +2,250 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Perfil de Investimento</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Perfil de Investimento</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <div class="upform">
-        <form>
+  <div class="upform">
+    <form onsubmit="calculatePoints()">
+      <div class="upform-header"></div>
+      <div class="upform-main">
+        <div class="input-block card_one">
+          <div class="label">1) Olá! Quando o seu assunto é investir dinheiro, qual o seu principal objetivo?
+          </div>
+          <div class="input-control">
+            <input id="toggle-on-q1-1" class="toggle toggle-left" name="q1" value="1" type="radio"
+              onchange="handleChangeQ1(this)">
+            <label class="card" for="toggle-on-q1-1">
+              <button class="card__save  js-save" type="button">
+                <i class="fa  fa-bookmark"></i>
+              </button>
+              <figure class="card__image">
+                <img src="https://amp.businessinsider.com/images/5b32aa651ae6623f008b492e-750-500.jpg"
+                  alt="Short description">
+              </figure>
+              <div class="card__header">
+                <figure class="card__profile">
+                </figure>
+              </div>
+              <div class="card__body">
+                <h3 class="card__name">Viajar e aproveitar a vida</h3>
+                </p>
+              </div>
+              <div class="card__footer">
+                <p class=""></p>
+              </div>
+            </label>
+            <input id="toggle-on-q1-2" class="toggle toggle-right" name="q1" value="2" type="radio"
+              onchange="handleChangeQ1(this)">
+            <label class="card" for="toggle-on-q1-2">
+              <button class="card__save  js-save" type="button">
+                <i class="fa  fa-bookmark"></i>
+              </button>
+              <figure class="card__image">
+                <img
+                  src="https://images.readwrite.com/wp-content/uploads/2019/06/Where-Will-AI-Take-the-Real-Estate-Market-in-10-Years-825x500.jpg"
+                  alt="Short description">
+              </figure>
+              <div class="card__header">
+                <figure class="card__profile">
+                </figure>
+              </div>
+              <div class="card__body">
+                <h3 class="card__name">Comprar um imóvel</h3>
+              </div>
+              <div class="card__footer">
+                <p class=""></p>
+              </div>
+            </label>
+            <input id="toggle-on-q1-3" class="toggle toggle-right" name="q1" value="3" type="radio"
+              onchange="handleChangeQ1(this)">
+            <label class="card" for="toggle-on-q1-3">
+              <button class="card__save  js-save" type="button">
+                <i class="fa  fa-bookmark"></i>
+              </button>
+              <figure class="card__image">
+                <img
+                  src="https://www.mercedes-benz.com/wp-content/uploads/sites/3/2018/02/mercedes-benz-passenger-cars-e-class-coupe-c-238-avantgarde-obsidian-black-metallic-3400x1440.jpg"
+                  alt="Short description">
+              </figure>
+              <div class="card__header">
+                <figure class="card__profile">
+                </figure>
+              </div>
+              <div class="card__body">
+                <h3 class="card__name">Comprar ou trocar de carro</h3>
+              </div>
+              <div class="card__footer">
+                <p class=""></p>
+              </div>
+            </label>
+            <input id="toggle-on-q1-4" class="toggle toggle-right" name="q1" value="4" type="radio"
+              onchange="handleChangeQ1(this)">
+            <label class="card" for="toggle-on-q1-4">
+              <button class="card__save  js-save" type="button">
+                <i class="fa  fa-bookmark"></i>
+              </button>
+              <figure class="card__image">
+                <img
+                  src="https://media3.s-nbcnews.com/j/newscms/2017_28/2067216/170710-money-jar-mn-1355_b73bfd0f28cbfa8b23de3111d07d37da.fit-760w.JPG"
+                  alt="Short description">
+              </figure>
+              <div class="card__header">
+                <figure class="card__profile">
+                </figure>
+              </div>
+              <div class="card__body">
+                <h3 class="card__name">Guardar dinheiro para aposentadoria</h3>
+              </div>
+              <div class="card__footer">
+                <p class=""></p>
+              </div>
+            </label>
+            <input id="toggle-on-q1-5" class="toggle toggle-right" name="q1" value="5" type="radio"
+              onchange="handleChangeQ1(this)">
+            <label class="card" for="toggle-on-q1-5">
+              <button class="card__save  js-save" type="button">
+                <i class="fa  fa-bookmark"></i>
+              </button>
+              <figure class="card__image">
+                <img src="https://newmediaeurope.com/wp-content/uploads/2017/05/make-money-online-933x445.jpg"
+                  alt="Short description">
+              </figure>
+              <div class="card__header">
+                <figure class="card__profile">
+                </figure>
+              </div>
+              <div class="card__body">
+                <h3 class="card__name">Rentabilizar meu patrimônio</h3>
+              </div>
+              <div class="card__footer">
+                <p class=""></p>
+              </div>
+            </label>
+            <input id="toggle-on-q1-6" class="toggle toggle-right" name="q1" value="6" type="radio"
+              onchange="handleChangeQ1(this)">
+            <label class="card" for="toggle-on-q1-6">
+              <button class="card__save  js-save" type="button">
+                <i class="fa  fa-bookmark"></i>
+              </button>
+              <figure class="card__image">
+                <img src="https://yourlifeiowa.org/sites/default/files/images/GettyImages-625736338_0.jpg"
+                  alt="Short description">
+              </figure>
+              <div class="card__header">
+                <figure class="card__profile">
+                </figure>
+              </div>
+              <div class="card__body">
+                <h3 class="card__name">Ajudar parentes / amigos</h3>
+              </div>
+              <div class="card__footer">
+                <p class=""></p>
+              </div>
+            </label>
+          </div>
+        </div>
 
-            <div class="upform-header"></div>
+        <div class="input-block card_one">
+          <div class="label">2) Daqui a quanto tempo você pretende <span id="choice"></span>?</div>
+          <div class="input-control">
+            <input type="text" class="required" autocomplete="off" autofocus id="question3">
+          </div>
+        </div>
 
-            <div class="upform-main">
+        <div class="input-block">
+          <div class="label">3) De quanto dinheiro, mais ou menos, você precisa pra isso?
+          </div>
+          <div class="input-control slider-container">
+            <input type="range" min="0" max="500000" step="10000" value="1" id="myRange" class="slider" autofocus
+              class="required slider" autocomplete="off">
+          </div>
+          R$ <span id="demo"></span>
+        </div>
 
+        <div class="input-block card_one">
+          <div class="label">4) Quanto dinheiro entra na sua conta todo mês?</div>
+          <div class="input-control">
+            <input type="text" class="required phone" autocomplete="off" autofocus name="question4">
+          </div>
+        </div>
 
-                <div class="input-block">
-                    <div class="label">Q1. Olá! Quando o seu assunto é investir dinheiro, qual o seu principal objetivo?</div>
-                    <div class="input-control">
-                        <input id="toggle-on-q1" class="toggle toggle-left" name="q1" value="yes" type="radio">
-                        <label for="toggle-on-q1" class="btn"><span>A</span> Yes</label>
-                        <input id="toggle-off-q1" class="toggle toggle-right" name="q1" value="no" type="radio">
-                        <label for="toggle-off-q1" class="btn"><span>B</span> No</label>
-                    </div>
-                </div>
+        <div class="input-block card_one">
+          <div class="label">5) Nos dois últimos anos, você investiu em algum destes produtos: renda fixa,
+            renda variável, plano de previdência?</div>
+          <div class="input-control">
+            <input id="toggle-on-q5" class="toggle toggle-left" name="q5" value="2" type="radio">
+            <label for="toggle-on-q5" class="btn"><span>S</span> Sim</label>
+            <input id="toggle-off-q5" class="toggle toggle-right" name="q5" value="0" type="radio">
+            <label for="toggle-off-q5" class="btn"><span>N</span> Não</label>
+          </div>
+        </div>
 
-                <div class="input-block">
-                    <div class="label">Q2. De quanto, mais ou menos, você precisa pra isso?
-                    </div>
-                    <div class="input-control">
-                        <input type="text" class="required" autocomplete="off" autofocus>
-                    </div>
-                </div>
+        <div class="input-block card_one">
+          <div class="label">6) Dos nomes abaixo, quais soam familiares?</div>
+          <div class="input-control">
+            <input id="toggle-on-q6-1" class="toggle toggle-left" name="q6" value="2" type="radio">
+            <label for="toggle-on-q6-1" class="btn">CDB</label>
+            <input id="toggle-off-q6-2" class="toggle toggle-right" name="q6" value="2" type="radio">
+            <label for="toggle-off-q6-2" class="btn">LCI/LCA</label>
+            <input id="toggle-off-q6-3" class="toggle toggle-right" name="q6" value="2" type="radio">
+            <label for="toggle-off-q6-3" class="btn">Fundos multimercado</label>
+            <input id="toggle-off-q6-4" class="toggle toggle-right" name="q6" value="2" type="radio">
+            <label for="toggle-off-q6-4" class="btn">Debêntures</label>
+            <input id="toggle-off-q6-5" class="toggle toggle-right" name="q6" value="2" type="radio">
+            <label for="toggle-off-q6-5" class="btn">Ações / Fundos de ações</label>
+            <input id="toggle-off-q6-6" class="toggle toggle-right" name="q6" value="0" type="radio">
+            <label for="toggle-off-q6-6" class="btn">Nunca ouvi falar</label>
+          </div>
+        </div>
+      </div>
 
-                <div class="input-block">
-                    <div class="label">Q3. Daqui a quanto tempo você pretende ter ?</div>
-                    <div class="input-control">
-                        <input id="toggle-on-q3" class="toggle toggle-left" name="q3" value="yes" type="radio">
-                        <label for="toggle-on-q3" class="btn"><span>A</span> Yes</label>
-                        <input id="toggle-off-q3" class="toggle toggle-right" name="q3" value="no" type="radio">
-                        <label for="toggle-off-q3" class="btn"><span>B</span> No</label>
-                    </div>
-                </div>
+      <div class="input-block card_one">
+        <div class="label">7) Imagine que você recebeu um bônus de R$ 30.000,00. Qual sua primeira ideia para o
+          dinheiro extra?</div>
+        <div class="input-control">
+          <input id="toggle-on-q7-1" class="toggle toggle-left" name="q7" value="1" type="radio">
+          <label for="toggle-on-q7-1" class="btn"><span>1</span> Curtir com a família / amigos</label>
+          <input id="toggle-off-q7-2" class="toggle toggle-right" name="q7" value="2" type="radio">
+          <label for="toggle-off-q7-2" class="btn"><span>2</span> Trocar de carro</label>
+          <input id="toggle-off-q7-3" class="toggle toggle-right" name="q7" value="3" type="radio">
+          <label for="toggle-off-q7-3" class="btn"><span>3</span> Gastar apenas o essencial e investir o
+            restante</label>
+        </div>
+      </div>
 
-                <div class="input-block">
-                    <div class="label">Q4. Quanto dinheiro entra na sua conta todo mês?</div>
-                    <div class="input-control">
-                        <input type="text" class="required" autocomplete="off" autofocus>
-                    </div>
-                </div>
-
-                <div class="input-block">
-                    <div class="label">Q5. Nos dois últimos anos, você investiu em algum destes produtos: renda fixa, renda variável, plano de previdência?</div>
-                    <div class="input-control">
-                        <input id="toggle-on-q3" class="toggle toggle-left" name="q3" value="yes" type="radio">
-                        <label for="toggle-on-q3" class="btn"><span>S</span> Sim</label>
-                        <input id="toggle-off-q3" class="toggle toggle-right" name="q3" value="no" type="radio">
-                        <label for="toggle-off-q3" class="btn"><span>N</span> Não</label>
-                    </div>
-                </div>
-
-                <div class="input-block">
-                    <div class="label">Q6. Dos nomes abaixo, quais soam familiares?</div>
-                    <div class="input-control">
-                        <input id="toggle-on-q3" class="toggle toggle-left" name="q3" value="yes" type="radio">
-                        <label for="toggle-on-q3" class="btn">CDB</label>
-                        <input id="toggle-off-q3" class="toggle toggle-right" name="q3" value="no" type="radio">
-                        <label for="toggle-off-q3" class="btn">LCI/LCA</label>
-                        <input id="toggle-off-q3" class="toggle toggle-right" name="q3" value="no" type="radio">
-                        <label for="toggle-off-q3" class="btn">Fundos multimercado</label>
-                        <input id="toggle-off-q3" class="toggle toggle-right" name="q3" value="no" type="radio">
-                        <label for="toggle-off-q3" class="btn">Debêntures</label>
-                        <input id="toggle-off-q3" class="toggle toggle-right" name="q3" value="no" type="radio">
-                        <label for="toggle-off-q3" class="btn">Ações / Fundos de ações</label>
-                        <input id="toggle-off-q3" class="toggle toggle-right" name="q3" value="no" type="radio">
-                        <label for="toggle-off-q3" class="btn">Nunca ouvi falar</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="input-block">
-                <div class="label">Q7. Imagine que você recebeu um bônus de R$ 30.000,00. Qual sua primeira ideia para o dinheiro extra?</div>
-                <div class="input-control">
-                    <input id="toggle-on-q3" class="toggle toggle-left" name="q3" value="yes" type="radio">
-                    <label for="toggle-on-q3" class="btn"><span>1</span> Curtir com a família / amigos</label>
-                    <input id="toggle-off-q3" class="toggle toggle-right" name="q3" value="no" type="radio">
-                    <label for="toggle-off-q3" class="btn"><span>2</span> Trocar de carro</label>
-                    <input id="toggle-off-q3" class="toggle toggle-right" name="q3" value="no" type="radio">
-                    <label for="toggle-off-q3" class="btn"><span>3</span> Gastar apenas o essencial e investir o restante</label>
-                </div>
-            </div>
-
-            <div class="input-block">
-                <div class="label">Q8. Você comprou um ingresso <i>premium</i> para assistir ao último show de seu artista favorito, com direito a sessão de autógrafos. Chegando ao local, percebeu que havia perdido o ingresso. O que você faz?</div>
-                <div class="input-control">
-                    <input id="toggle-on-q3" class="toggle toggle-left" name="q3" value="yes" type="radio">
-                    <label for="toggle-on-q3" class="btn"><span>1</span> Compra um ingresso <i>premium</i> e assiste ao show</label>
-                    <input id="toggle-off-q3" class="toggle toggle-right" name="q3" value="no" type="radio">
-                    <label for="toggle-off-q3" class="btn"><span>2</span> Compra um ingresso barato, para economizar, e assiste ao show</label>
-                    <input id="toggle-off-q3" class="toggle toggle-right" name="q3" value="no" type="radio">
-                    <label for="toggle-off-q3" class="btn"><span>3</span> Volta para casa para não perder mais dinheiro</label>
-                </div>
-            </div>
-
-            <div class="upform-footer">
-                <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
-            </div>
-
-        </form>
+      <div class="input-block card_one">
+        <div class="label">8) Você comprou um ingresso <i>premium</i> para assistir ao último show de seu
+          artista favorito, com direito a sessão de autógrafos. Chegando ao local, percebeu que havia perdido
+          o ingresso. O que você faz?</div>
+        <div class="input-control">
+          <input id="toggle-on-q8-1" class="toggle toggle-left" name="q8" value="1" type="radio">
+          <label for="toggle-on-q8-1" class="btn"><span>1</span> Compra um ingresso <i>premium</i> e assiste ao
+            show</label>
+          <input id="toggle-off-q8-2" class="toggle toggle-right" name="q8" value="2" type="radio">
+          <label for="toggle-off-q8-2" class="btn"><span>2</span> Compra um ingresso barato, para economizar, e
+            assiste ao show</label>
+          <input id="toggle-off-q8-3" class="toggle toggle-right" name="q8" value="3" type="radio">
+          <label for="toggle-off-q8-3" class="btn"><span>3</span> Volta para casa para não perder mais
+            dinheiro</label>
+        </div>
+      </div>
+    </form>
+    <div class="upform-footer">
+      <button class="btn btn-primary btn-lg" onclick="calculatePoints()">Enviar</button>
     </div>
+  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
-    <script src="form.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="form.js"></script>
 </body>
 
 </html>
