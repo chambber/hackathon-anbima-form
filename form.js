@@ -179,12 +179,25 @@ function calculatePoints() {
   const q8 = document.querySelector("input[name='q8']:checked").value;
 
   const result = q5 + q6 + q7 + q8;
-
+  console.log('result', result)
   var xhr = new XMLHttpRequest();
   xhr.open("POST", 'http://localhost:7072/', true);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify({
-    value: result
+    value: [
+      {
+        point: q5
+      },
+      {
+        point: q6
+      },
+      {
+        point: q7
+      },
+      {
+        point: q8
+      },
+    ]
   }));
 }
 
